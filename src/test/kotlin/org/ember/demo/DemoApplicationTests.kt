@@ -16,29 +16,14 @@ class DemoApplicationTests {
     @Test
     fun mybatisFlexCodeGen() {
         val globalConfig = GlobalConfig()
-            .also {
-                it.javadocConfig.author = "Eden"
-            }
-            .also {
-                it.packageConfig.setBasePackage("org.ember.demo")
-            }.also {
-                it.enableEntity()
-                    .setWithLombok(true)
-                    .setJdkVersion(21)
-            }.also {
-                it.enableMapper()
-                    .setMapperAnnotation(true)
-            }.also {
-                it.enableService()
-            }.also {
-                it.enableServiceImpl()
-                    .setCacheExample(true)
-            }.also {
-                it.enableController()
-                    .setRestStyle(true)
-            }.also {
-                it.enableMapperXml()
-            }
+            .also { it.javadocConfig.author = "Eden" }
+            .also { it.packageConfig.setBasePackage("org.ember.demo") }
+            .also { it.enableEntity().setWithLombok(true).setJdkVersion(21) }
+            .also { it.enableMapper().setMapperAnnotation(true) }
+            .also { it.enableService() }
+            .also { it.enableServiceImpl().setCacheExample(true) }
+            .also { it.enableController().setRestStyle(true) }
+            .also { it.enableMapperXml() }
         val generator = Generator(dataSource, globalConfig)
         generator.generate()
     }
