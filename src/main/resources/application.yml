@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: springboot-kotlin-learning
+
+  security:
+    user:
+      name: root
+      password: 12345678
+      roles:
+        - USER
+        - ADMIN
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_learning_db
+    username: spring_learning
+    password: 12345678
