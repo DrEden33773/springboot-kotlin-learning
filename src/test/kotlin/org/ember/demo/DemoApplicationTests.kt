@@ -24,26 +24,20 @@ class DemoApplicationTests {
             }.also {
                 it.enableEntity()
                     .setWithLombok(true)
-                    .setOverwriteEnable(true)
                     .setJdkVersion(21)
             }.also {
                 it.enableMapper()
-                    .setOverwriteEnable(true)
                     .setMapperAnnotation(true)
             }.also {
                 it.enableService()
-                    .setOverwriteEnable(true)
             }.also {
                 it.enableServiceImpl()
-                    .setOverwriteEnable(true)
                     .setCacheExample(true)
             }.also {
                 it.enableController()
-                    .setOverwriteEnable(true)
                     .setRestStyle(true)
             }.also {
                 it.enableMapperXml()
-                    .setOverwriteEnable(true)
             }
         val generator = Generator(dataSource, globalConfig)
         generator.generate()

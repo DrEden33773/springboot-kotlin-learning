@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
-    id("com.google.devtools.ksp") version "1.9.25-1.0.20" apply false
+    id("com.google.devtools.ksp") version "1.9.25-1.0.20"
     id("org.springframework.boot") version "3.3.3"
     id("io.spring.dependency-management") version "1.1.6"
     id("org.graalvm.buildtools.native") version "0.10.2"
@@ -39,6 +39,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
     compileOnly("org.projectlombok:lombok")
+    "developmentOnly"("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     annotationProcessor("org.projectlombok:lombok")
@@ -47,7 +48,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testImplementation("org.springframework.security:spring-security-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("com.mybatis-flex:mybatis-flex-spring-boot-starter:1.9.6")
+    implementation("com.mybatis-flex:mybatis-flex-spring-boot3-starter:1.9.6")
     annotationProcessor("com.mybatis-flex:mybatis-flex-processor:1.9.6")
     implementation("com.mybatis-flex:mybatis-flex-codegen:1.9.6")
     implementation("com.zaxxer:HikariCP:5.1.0")
