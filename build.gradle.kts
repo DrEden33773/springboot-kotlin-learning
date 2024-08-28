@@ -49,11 +49,11 @@ dependencies {
     testImplementation("org.springframework.security:spring-security-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("com.mybatis-flex:mybatis-flex-spring-boot3-starter:1.9.6")
-    annotationProcessor("com.mybatis-flex:mybatis-flex-processor:1.9.6")
+//    annotationProcessor("com.mybatis-flex:mybatis-flex-processor:1.9.6")
+    ksp("com.mybatis-flex:mybatis-flex-kotlin-ksp:1.0.1")
     implementation("com.mybatis-flex:mybatis-flex-codegen:1.9.6")
     implementation("com.zaxxer:HikariCP:5.1.0")
     implementation("com.mybatis-flex:mybatis-flex-kotlin-extensions:1.1.2")
-    implementation("com.mybatis-flex:mybatis-flex-kotlin-ksp:1.0.1")
 }
 
 kotlin {
